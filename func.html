@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="parentDiv">
+        <h1 id="heading">Understanding Functions</h1>
+        <ul id="list"></ul>
+    </div>
+    <script>
+        // high order function
+        // function mean value
+        var a = 5;
+        //console.log(a);
+        // declare, expression func
+        let b = function(){
+            console.log("hello")
+        }
+        // calling or call or invoke b()
+        //b();
+        // high order func, a function which we pass into another function as a agrument
+        // function(){...}  c(function(){...})
+
+        // array high order function
+        let stdLists = [
+            {name: "bilal", degree: "cs", age: 25},
+            {name: "fawad", degree: "cs", age: 25},
+            {name: "khan", degree: "bba", age: 27},
+            {name: "samail", degree: "ms", age: 35}
+        ];
+        // let csList=[];
+        // for(i=0; i < stdLists.length; i++){
+        //     if(stdLists[i].degree == "cs"){
+        //         csList.push(stdLists[i].name)
+        //     }
+        // }
+        // console.log(csList)
+
+        // let std = stdLists.filter(function(item){
+        //     return item.degree=="cs"
+        // });
+//         let std = stdLists.filter( item=> item.degree=="cs").map(item => {
+//         return `<li>${item.name}</li>`;
+//     });
+// document.getElementById('list').innerHTML=std
+
+let counts = [1,2,3,545,57,8,7899,789,78,678];
+let sum = counts.reduce((acc, num) => {
+    return acc+num;
+}, 0);
+console.log(sum)
+         </script>
+</body>
+</html>
